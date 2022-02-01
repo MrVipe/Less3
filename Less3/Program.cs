@@ -6,7 +6,17 @@ namespace Less3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int[,] Mass = new int[10, 10];
+            for (int i = 0; i < Mass.GetLength(0); i++)
+            {
+                for (int j = 0; j < Mass.GetLength(1); j++)
+                {
+                    Mass[i, j] = i + j;
+                    if (i == j) Console.WriteLine(Mass[i, j]);
+                }
+            }
+
+            Console.ReadKey();
         }
     }
 }
