@@ -6,16 +6,13 @@ namespace Less3
     {
         static void Main(string[] args)
         {
-            int[,] Mass = new int[10, 10];
-            for (int i = 0; i < Mass.GetLength(0); i++)
+            string Stroka = Console.ReadLine();
+            string Stroka2 = "";
+            for (int i = Stroka.Length - 1; i >= 0; i--)
             {
-                for (int j = 0; j < Mass.GetLength(1); j++)
-                {
-                    Mass[i, j] = i + j;
-                    if (i == j) Console.WriteLine(Mass[i, j]);
-                }
+                Stroka2 += Stroka[i]; 
             }
-
+            Console.WriteLine(Stroka2);
             Console.ReadKey();
         }
     }
